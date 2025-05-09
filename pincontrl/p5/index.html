@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Traffic Light</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="libraries/p5.webserial.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🚦 LED Traffic Light System</h1>
+
+        <div class="controls">
+            <button id="connectBtn">Connect to Arduino</button>
+            <button id="disconnectBtn">Disconnect</button>
+        </div>
+
+        <div class="status">
+            <p id="brightnessDisplay">Brightness: 0</p>
+            <p id="modeDisplay">Mode: 기본</p>
+            <p id="taskDisplay">Task: None</p>
+        </div>
+
+        <div class="sliders">
+            <label for="redSlider">🔴 Red Time:</label>
+            <input type="range" id="redSlider" min="500" max="5000" value="2000">
+            <p id="redLabel">Red Time: 2000 ms</p>
+
+            <label for="yellowSlider">🟡 Yellow Time:</label>
+            <input type="range" id="yellowSlider" min="500" max="5000" value="500">
+            <p id="yellowLabel">Yellow Time: 500 ms</p>
+
+            <label for="greenSlider">🟢 Green Time:</label>
+            <input type="range" id="greenSlider" min="500" max="5000" value="2000">
+            <p id="greenLabel">Green Time: 2000 ms</p>
+        </div>
+    </div>
+
+    <script src="sketch.js"></script>
+</body>
+</html>
